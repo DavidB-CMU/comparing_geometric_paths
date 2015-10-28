@@ -1,6 +1,6 @@
 %
 % Example 3:
-% Mirrored paths
+% Calculate the discrete Frechet distance between two mirrored paths
 %
 
 P = [0.0, 1.0, 1.0;
@@ -50,10 +50,10 @@ legend('Q','P','location','best');
 
 % Plot the coupling sequence
 for i = 1:length(cm_seq)
-  line_x_values = [P(cm_seq(i,1),1), Q(cm_seq(i,2),1)];
-  line_y_values = [P(cm_seq(i,1),2), Q(cm_seq(i,2),2)];
-  line_z_values = [P(cm_seq(i,1),3), Q(cm_seq(i,2),3)];
-  line(line_x_values, line_y_values, line_z_values, 'color',[0.5,0.5,0.5]);
+    line_x_values = [P(cm_seq(i,1),1), Q(cm_seq(i,2),1)];
+    line_y_values = [P(cm_seq(i,1),2), Q(cm_seq(i,2),2)];
+    line_z_values = [P(cm_seq(i,1),3), Q(cm_seq(i,2),3)];
+    line(line_x_values, line_y_values, line_z_values, 'color',[0.5,0.5,0.5]);
 end
 
 xlabel('x');
